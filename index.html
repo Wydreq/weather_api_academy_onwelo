@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App Onwelo Academy</title>
+    <link rel="stylesheet" href="./style/style.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="titleCont">
+            <h1 class="title">Weather app</h1>
+        </div>
+        <div class="formContainer">
+            <span>
+                 <select id="citySelect">
+                <option hidden disabled selected value></option>
+                <option value="kielce">Kielce</option>
+                <option value="krakow">Kraków</option>
+                <option value="lublin">Lublin</option>
+                </select>
+                <button class="searchButton" id="searchButton">Search</button>
+            </span>
+            <span class="hiddenError" id="errorMessage">Please insert correct value!</span>
+        </div>
+        <span class="blocksContainer">
+            <div class="currentWeatherContainer">
+                <span id="weatherTitle">Search weather forecast!</span>
+                <img id="weatherImage" class="image" src="./assets/sunny.png" alt="sunnyImage" />
+                <span class="temperature" id="temperature">--℃</span>
+                <span class="forecastInfo" id="measurementDate">Measurement date: --</span>
+                <span class="forecastInfo" id="pressure">Pressure: --</span>
+        </div>
+        <div class="lastForecastsContainer">
+             <span class="weatherTitle">Previous forecasts</span>
+            <img id="weatherImagePv" class="image" src="./assets/sunny.png" alt="sunnyImage" />
+        </div>
+        </span>
+    </div>
+    <script src="./scripts/searchHandler.js"></script>
+</body>
+</html>
