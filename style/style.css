@@ -89,7 +89,7 @@ button:hover {
 .currentWeatherContainer {
     min-width: 30%;
     padding: 30px;
-    min-height: 300px;
+    min-height: 430px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -127,12 +127,40 @@ button:hover {
 .lastForecastsContainer {
     min-width: 30%;
     padding: 30px;
-    min-height: 300px;
+    min-height: 430px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     margin-top: 20px;
     border-radius: 20px;
     background-color: rgba(255,255,255,0.9);
+}
+
+.columnCont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.hidden {
+    opacity: 0;
+}
+
+.arrow:hover {
+    cursor: pointer;
+    color:#1DBFFF;
+}
+
+#clearStorage {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+#clearStorage:hover {
+    color:#1DBFFF;
+    cursor: pointer;
 }

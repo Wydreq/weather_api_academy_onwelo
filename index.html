@@ -31,11 +31,22 @@
                 <span class="forecastInfo" id="pressure">Pressure: --</span>
         </div>
         <div class="lastForecastsContainer">
-             <span class="weatherTitle">Previous forecasts</span>
-            <img id="weatherImagePv" class="image" src="./assets/sunny.png" alt="sunnyImage" />
+            <i class="fa-solid fa-arrow-left fa-2xl arrow hidden" id="leftArrow"></i>
+            <span class="columnCont">
+                <span class="weatherTitle">Previous forecasts</span>
+                <span class="weatherTitle" id="weatherCityPv">City</span>
+                <img id="weatherImagePv" class="image" src="./assets/sunny.png" alt="sunnyImage" />
+                <span class="temperature" id="temperaturePv">--℃</span>
+                <span class="forecastInfo" id="measurementDatePv">Measurement date: --</span>
+                <span class="forecastInfo" id="pressurePv">Pressure: --</span>
+                <span id="clearStorage">Clear storage <i class="fa-solid fa-trash"></i></span>
+            </span>
+            <i class="fa-solid fa-arrow-right fa-2xl arrow hidden" id="rightArrow"></i>
         </div>
         </span>
     </div>
+    <script src="./scripts/previousForecastsHandler.js"></script>
     <script src="./scripts/searchHandler.js"></script>
+    <script src="https://kit.fontawesome.com/a540f7104e.js" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -7,6 +7,7 @@ const weatherTitle = document.getElementById('weatherTitle');
 const currentTemperature = document.getElementById('temperature');
 const currentMeasurementDate = document.getElementById('measurementDate');
 const currentPressure = document.getElementById('pressure');
+
 function buttonHandler() {
     const select = document.getElementById('citySelect');
     const value = select.options[select.selectedIndex].value;
@@ -16,7 +17,6 @@ function buttonHandler() {
     }
     else {
         document.getElementById('errorMessage').className = 'showedError';
-        return;
     }
 }
 
@@ -26,7 +26,6 @@ const getApiWeather = async (value) => {
         btn.textContent = 'Searching...'
         const response = await fetch(`https://danepubliczne.imgw.pl/api/data/synop/station/${value}`);
         const data = await response.json();
-        console.log(data);
 
         if(data.status === false) {
             btn.textContent = 'Search';
@@ -48,6 +47,8 @@ const getApiWeather = async (value) => {
             }
             existingForecasts.push(data);
             localStorage.setItem('allForecasts', JSON.stringify(existingForecasts));
+            counter = JSON.parse(localStorage.getItem('allForecasts')).length-1;
+            fetchedData = JSON.parse(localStorage.getItem('allForecasts'));
         }
         btn.textContent = 'Search';
         return data;
