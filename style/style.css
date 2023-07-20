@@ -8,13 +8,13 @@
 
 .container {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
     background-image: url("../assets/background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-size: revert;
+    padding: 30px;
 }
 
 .titleCont {
@@ -32,9 +32,9 @@
 }
 
 .formContainer {
-    width: 30%;
+    min-width: 30%;
     padding: 10px;
-    min-height: 75px;
+    min-height: 120px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -163,4 +163,29 @@ button:hover {
 #clearStorage:hover {
     color:#1DBFFF;
     cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+    .inputCont {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    select {
+        margin-right: 0;
+    }
+
+    button {
+        margin-top: 20px;
+    }
+
+    .blocksContainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
 }
